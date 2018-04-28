@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		1F7EAA972092A5FB00C22EC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7EAA962092A5FB00C22EC3 /* AppDelegate.swift */; };
-		1F7EAA992092A5FB00C22EC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7EAA982092A5FB00C22EC3 /* ViewController.swift */; };
+		1F7EAA992092A5FB00C22EC3 /* ReposInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7EAA982092A5FB00C22EC3 /* ReposInfoViewController.swift */; };
 		1F7EAA9C2092A5FB00C22EC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F7EAA9A2092A5FB00C22EC3 /* Main.storyboard */; };
 		1F7EAA9E2092A5FD00C22EC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F7EAA9D2092A5FD00C22EC3 /* Assets.xcassets */; };
 		1F7EAAA12092A5FD00C22EC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F7EAA9F2092A5FD00C22EC3 /* LaunchScreen.storyboard */; };
 		1F7EAAAC2092A5FD00C22EC3 /* HomeDepot_CodeChallangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7EAAAB2092A5FD00C22EC3 /* HomeDepot_CodeChallangeTests.swift */; };
 		1F7EAAB72092A5FD00C22EC3 /* HomeDepot_CodeChallangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7EAAB62092A5FD00C22EC3 /* HomeDepot_CodeChallangeUITests.swift */; };
+		1F7EAAC82092CBB500C22EC3 /* RepoListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7EAAC72092CBB500C22EC3 /* RepoListViewCell.swift */; };
+		1F7EAACA2092CBDB00C22EC3 /* RepoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7EAAC92092CBDB00C22EC3 /* RepoCollectionViewCell.swift */; };
+		1FF0726B2093E4F500F437C3 /* RepoWebserviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0726A2093E4F500F437C3 /* RepoWebserviceManager.swift */; };
+		1FF0726D2093E54100F437C3 /* RepoItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0726C2093E54100F437C3 /* RepoItemModel.swift */; };
+		1FF0727020940E4800F437C3 /* RepoUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0726F20940E4800F437C3 /* RepoUtils.swift */; };
+		1FF0727220945CCC00F437C3 /* RepoCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0727120945CCC00F437C3 /* RepoCollectionLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +42,7 @@
 /* Begin PBXFileReference section */
 		1F7EAA932092A5FB00C22EC3 /* HomeDepot_CodeChallange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeDepot_CodeChallange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7EAA962092A5FB00C22EC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1F7EAA982092A5FB00C22EC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1F7EAA982092A5FB00C22EC3 /* ReposInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposInfoViewController.swift; sourceTree = "<group>"; };
 		1F7EAA9B2092A5FB00C22EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F7EAA9D2092A5FD00C22EC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F7EAAA02092A5FD00C22EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +53,12 @@
 		1F7EAAB22092A5FD00C22EC3 /* HomeDepot_CodeChallangeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeDepot_CodeChallangeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7EAAB62092A5FD00C22EC3 /* HomeDepot_CodeChallangeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDepot_CodeChallangeUITests.swift; sourceTree = "<group>"; };
 		1F7EAAB82092A5FD00C22EC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F7EAAC72092CBB500C22EC3 /* RepoListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewCell.swift; sourceTree = "<group>"; };
+		1F7EAAC92092CBDB00C22EC3 /* RepoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCollectionViewCell.swift; sourceTree = "<group>"; };
+		1FF0726A2093E4F500F437C3 /* RepoWebserviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoWebserviceManager.swift; sourceTree = "<group>"; };
+		1FF0726C2093E54100F437C3 /* RepoItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoItemModel.swift; sourceTree = "<group>"; };
+		1FF0726F20940E4800F437C3 /* RepoUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoUtils.swift; sourceTree = "<group>"; };
+		1FF0727120945CCC00F437C3 /* RepoCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCollectionLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +109,12 @@
 		1F7EAA952092A5FB00C22EC3 /* HomeDepot_CodeChallange */ = {
 			isa = PBXGroup;
 			children = (
+				1FF0726E20940E3700F437C3 /* Common */,
+				1FF072692093E4AF00F437C3 /* Webservice */,
+				1F7EAAC62092C7B200C22EC3 /* Model */,
+				1F7EAAC52092C7AB00C22EC3 /* View */,
+				1F7EAAC42092C79D00C22EC3 /* Controller */,
 				1F7EAA962092A5FB00C22EC3 /* AppDelegate.swift */,
-				1F7EAA982092A5FB00C22EC3 /* ViewController.swift */,
-				1F7EAA9A2092A5FB00C22EC3 /* Main.storyboard */,
 				1F7EAA9D2092A5FD00C22EC3 /* Assets.xcassets */,
 				1F7EAA9F2092A5FD00C22EC3 /* LaunchScreen.storyboard */,
 				1F7EAAA22092A5FD00C22EC3 /* Info.plist */,
@@ -123,6 +138,49 @@
 				1F7EAAB82092A5FD00C22EC3 /* Info.plist */,
 			);
 			path = HomeDepot_CodeChallangeUITests;
+			sourceTree = "<group>";
+		};
+		1F7EAAC42092C79D00C22EC3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1F7EAA982092A5FB00C22EC3 /* ReposInfoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1F7EAAC52092C7AB00C22EC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F7EAA9A2092A5FB00C22EC3 /* Main.storyboard */,
+				1F7EAAC72092CBB500C22EC3 /* RepoListViewCell.swift */,
+				1F7EAAC92092CBDB00C22EC3 /* RepoCollectionViewCell.swift */,
+				1FF0727120945CCC00F437C3 /* RepoCollectionLayout.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F7EAAC62092C7B200C22EC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1FF0726C2093E54100F437C3 /* RepoItemModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1FF072692093E4AF00F437C3 /* Webservice */ = {
+			isa = PBXGroup;
+			children = (
+				1FF0726A2093E4F500F437C3 /* RepoWebserviceManager.swift */,
+			);
+			path = Webservice;
+			sourceTree = "<group>";
+		};
+		1FF0726E20940E3700F437C3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1FF0726F20940E4800F437C3 /* RepoUtils.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F7EAA992092A5FB00C22EC3 /* ViewController.swift in Sources */,
+				1F7EAACA2092CBDB00C22EC3 /* RepoCollectionViewCell.swift in Sources */,
+				1F7EAA992092A5FB00C22EC3 /* ReposInfoViewController.swift in Sources */,
+				1FF0726D2093E54100F437C3 /* RepoItemModel.swift in Sources */,
+				1FF0726B2093E4F500F437C3 /* RepoWebserviceManager.swift in Sources */,
+				1FF0727020940E4800F437C3 /* RepoUtils.swift in Sources */,
+				1FF0727220945CCC00F437C3 /* RepoCollectionLayout.swift in Sources */,
+				1F7EAAC82092CBB500C22EC3 /* RepoListViewCell.swift in Sources */,
 				1F7EAA972092A5FB00C22EC3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

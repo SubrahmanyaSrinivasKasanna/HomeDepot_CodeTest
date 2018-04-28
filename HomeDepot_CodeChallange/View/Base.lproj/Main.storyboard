@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Repos Info View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ReposInfoViewController" customModule="HomeDepot_CodeChallange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="vnb-SF-vJu">
+                                <rect key="frame" x="0.0" y="44" width="375" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="X3N-5s-Piv"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Dbm-LK-W0J"/>
+                                </connections>
+                            </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Mzd-48-W4G">
+                                <rect key="frame" x="116" y="120" width="143" height="29"/>
+                                <segments>
+                                    <segment title="List view"/>
+                                    <segment title="Grid view"/>
+                                </segments>
+                                <connections>
+                                    <action selector="displayModeChaged:" destination="BYZ-38-t0r" eventType="valueChanged" id="qLU-TJ-aUx"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mO9-PX-3Qq">
+                                <rect key="frame" x="0.0" y="173" width="375" height="614"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RepoCell" rowHeight="150" id="d0z-1T-Bpc" customClass="RepoListViewCell" customModule="HomeDepot_CodeChallange" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d0z-1T-Bpc" id="FTT-3i-4aY">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXf-wG-pa7">
+                                                    <rect key="frame" x="15" y="15" width="42" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehM-u2-ziy">
+                                                    <rect key="frame" x="15" y="49" width="80.333333333333329" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created_at" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dD4-gd-8qe">
+                                                    <rect key="frame" x="15" y="83" width="74" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="License" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYr-lg-hnY">
+                                                    <rect key="frame" x="14.999999999999996" y="117" width="51.666666666666657" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKe-pO-tJw">
+                                                    <rect key="frame" x="322" y="15" width="38" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIc-Qs-R6z">
+                                                    <rect key="frame" x="110.33333333333333" y="49" width="249.66666666666669" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNS-30-lab">
+                                                    <rect key="frame" x="322" y="83" width="38" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efv-r4-wPx">
+                                                    <rect key="frame" x="322" y="117" width="38" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KYr-lg-hnY" firstAttribute="top" secondItem="dD4-gd-8qe" secondAttribute="bottom" constant="15" id="1iT-Ew-rIc"/>
+                                                <constraint firstAttribute="trailing" secondItem="nNS-30-lab" secondAttribute="trailing" constant="15" id="1xt-FW-HPP"/>
+                                                <constraint firstItem="ehM-u2-ziy" firstAttribute="leading" secondItem="FTT-3i-4aY" secondAttribute="leading" constant="15" id="3CL-Kz-nSe"/>
+                                                <constraint firstItem="VXf-wG-pa7" firstAttribute="top" secondItem="FTT-3i-4aY" secondAttribute="top" constant="15" id="5E2-hu-fIP"/>
+                                                <constraint firstItem="dD4-gd-8qe" firstAttribute="leading" secondItem="FTT-3i-4aY" secondAttribute="leading" constant="15" id="6oR-XY-MKY"/>
+                                                <constraint firstItem="ehM-u2-ziy" firstAttribute="top" secondItem="VXf-wG-pa7" secondAttribute="bottom" constant="15" id="D2O-Y7-OxY"/>
+                                                <constraint firstAttribute="trailing" secondItem="pKe-pO-tJw" secondAttribute="trailing" constant="15" id="FYD-sV-V4l"/>
+                                                <constraint firstAttribute="trailing" secondItem="pIc-Qs-R6z" secondAttribute="trailing" constant="15" id="IFD-4N-oYe"/>
+                                                <constraint firstItem="dD4-gd-8qe" firstAttribute="top" secondItem="ehM-u2-ziy" secondAttribute="bottom" constant="15" id="Kd7-9J-cc7"/>
+                                                <constraint firstItem="pIc-Qs-R6z" firstAttribute="top" secondItem="pKe-pO-tJw" secondAttribute="bottom" constant="15" id="LSl-Is-zUc"/>
+                                                <constraint firstAttribute="bottom" secondItem="Efv-r4-wPx" secondAttribute="bottom" constant="13.67" id="MNx-dr-3lA"/>
+                                                <constraint firstItem="nNS-30-lab" firstAttribute="top" secondItem="pIc-Qs-R6z" secondAttribute="bottom" constant="15" id="P89-mK-eV8"/>
+                                                <constraint firstItem="pKe-pO-tJw" firstAttribute="top" secondItem="FTT-3i-4aY" secondAttribute="top" constant="15" id="SKW-fX-sdE"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VXf-wG-pa7" secondAttribute="trailing" constant="20" symbolic="YES" id="Tqc-oR-xA3"/>
+                                                <constraint firstItem="VXf-wG-pa7" firstAttribute="leading" secondItem="FTT-3i-4aY" secondAttribute="leading" constant="15" id="UKA-Nd-Nl3"/>
+                                                <constraint firstItem="pKe-pO-tJw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FTT-3i-4aY" secondAttribute="leading" constant="20" symbolic="YES" id="Z9c-Cn-ss6"/>
+                                                <constraint firstAttribute="bottom" secondItem="KYr-lg-hnY" secondAttribute="bottom" constant="13.67" id="ZN7-Xe-UGj"/>
+                                                <constraint firstItem="Efv-r4-wPx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FTT-3i-4aY" secondAttribute="leading" constant="20" symbolic="YES" id="afT-Vk-vew"/>
+                                                <constraint firstItem="Efv-r4-wPx" firstAttribute="top" secondItem="nNS-30-lab" secondAttribute="bottom" constant="15" id="cyw-wU-Gmo"/>
+                                                <constraint firstAttribute="trailing" secondItem="Efv-r4-wPx" secondAttribute="trailing" constant="15" id="czM-oC-2X3"/>
+                                                <constraint firstItem="pIc-Qs-R6z" firstAttribute="leading" secondItem="ehM-u2-ziy" secondAttribute="trailing" constant="15" id="hUg-lW-teY"/>
+                                                <constraint firstItem="KYr-lg-hnY" firstAttribute="leading" secondItem="FTT-3i-4aY" secondAttribute="leading" constant="15" id="jI5-ZZ-sOx"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dD4-gd-8qe" secondAttribute="trailing" constant="20" symbolic="YES" id="ln9-W0-Vzb"/>
+                                                <constraint firstItem="nNS-30-lab" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FTT-3i-4aY" secondAttribute="leading" constant="20" symbolic="YES" id="qOV-ZW-ch9"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KYr-lg-hnY" secondAttribute="trailing" constant="20" symbolic="YES" id="riZ-kL-Fjv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="repoCreatedDate" destination="nNS-30-lab" id="KMo-AZ-cmB"/>
+                                            <outlet property="repoDescription" destination="pIc-Qs-R6z" id="0Ca-ja-Ffx"/>
+                                            <outlet property="repoLicense" destination="Efv-r4-wPx" id="QIA-Oi-05W"/>
+                                            <outlet property="repoName" destination="pKe-pO-tJw" id="rba-Oh-93l"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="oR7-92-6RA"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="j0o-M9-oK8"/>
+                                </connections>
+                            </tableView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uGA-bt-P9b">
+                                <rect key="frame" x="0.0" y="173" width="375" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sMr-r3-KzP">
+                                    <size key="itemSize" width="181" height="148"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RepoCell" id="5XO-6P-pwF" customClass="RepoCollectionViewCell" customModule="HomeDepot_CodeChallange" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="181" height="148"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="181" height="148"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eiy-t8-oSZ">
+                                                    <rect key="frame" x="15.333333333333329" y="15" width="155.66666666666669" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMS-Zp-8Oh">
+                                                    <rect key="frame" x="15" y="49" width="156" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltU-Yf-7lg">
+                                                    <rect key="frame" x="15" y="83" width="156" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDA-tw-U39">
+                                                    <rect key="frame" x="15" y="117" width="156" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="vDA-tw-U39" firstAttribute="top" secondItem="ltU-Yf-7lg" secondAttribute="bottom" constant="15" id="BVM-dX-EiK"/>
+                                            <constraint firstItem="ltU-Yf-7lg" firstAttribute="leading" secondItem="5XO-6P-pwF" secondAttribute="leading" constant="15" id="COG-fl-x6v"/>
+                                            <constraint firstItem="Eiy-t8-oSZ" firstAttribute="top" secondItem="5XO-6P-pwF" secondAttribute="top" constant="15" id="DMq-dn-wcg"/>
+                                            <constraint firstItem="OMS-Zp-8Oh" firstAttribute="leading" secondItem="5XO-6P-pwF" secondAttribute="leading" constant="15" id="DT6-sk-v47"/>
+                                            <constraint firstItem="OMS-Zp-8Oh" firstAttribute="top" secondItem="Eiy-t8-oSZ" secondAttribute="bottom" constant="15" id="MVR-ra-sKU"/>
+                                            <constraint firstAttribute="trailing" secondItem="OMS-Zp-8Oh" secondAttribute="trailing" constant="10" id="PNy-hJ-B1g"/>
+                                            <constraint firstItem="vDA-tw-U39" firstAttribute="leading" secondItem="5XO-6P-pwF" secondAttribute="leading" constant="15" id="ccd-S4-MTA"/>
+                                            <constraint firstItem="Eiy-t8-oSZ" firstAttribute="leading" secondItem="5XO-6P-pwF" secondAttribute="leading" constant="15" id="efw-5R-IAi"/>
+                                            <constraint firstAttribute="bottom" secondItem="vDA-tw-U39" secondAttribute="bottom" constant="11" id="ii9-x8-QJb"/>
+                                            <constraint firstItem="ltU-Yf-7lg" firstAttribute="top" secondItem="OMS-Zp-8Oh" secondAttribute="bottom" constant="15" id="jDD-9D-Us3"/>
+                                            <constraint firstAttribute="trailing" secondItem="vDA-tw-U39" secondAttribute="trailing" constant="10" id="mFw-ss-pOK"/>
+                                            <constraint firstAttribute="trailing" secondItem="ltU-Yf-7lg" secondAttribute="trailing" constant="10" id="mzi-fU-M1a"/>
+                                            <constraint firstAttribute="trailing" secondItem="Eiy-t8-oSZ" secondAttribute="trailing" constant="10" id="xLO-ac-IZ3"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="repoCreatedDate" destination="ltU-Yf-7lg" id="fhO-ci-eit"/>
+                                            <outlet property="repoDescription" destination="OMS-Zp-8Oh" id="AWk-dU-eOe"/>
+                                            <outlet property="repoLicense" destination="vDA-tw-U39" id="8wZ-5C-bUy"/>
+                                            <outlet property="repoName" destination="Eiy-t8-oSZ" id="VQl-9e-HQE"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="vpl-rg-0mA"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="e48-oL-TRX"/>
+                                </connections>
+                            </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="iEi-AM-x1s">
+                                <rect key="frame" x="169" y="444.66666666666669" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="mO9-PX-3Qq" secondAttribute="bottom" constant="25" id="BUc-Np-ZVH"/>
+                            <constraint firstItem="mO9-PX-3Qq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GxO-Wv-cmC"/>
+                            <constraint firstItem="vnb-SF-vJu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LNS-oK-qNz"/>
+                            <constraint firstItem="Mzd-48-W4G" firstAttribute="top" secondItem="vnb-SF-vJu" secondAttribute="bottom" constant="20" id="NLg-nL-3tZ"/>
+                            <constraint firstItem="mO9-PX-3Qq" firstAttribute="top" secondItem="Mzd-48-W4G" secondAttribute="bottom" constant="25" id="Nzf-Oi-Lpa"/>
+                            <constraint firstItem="iEi-AM-x1s" firstAttribute="centerX" secondItem="uGA-bt-P9b" secondAttribute="centerX" id="Tey-0x-kkS"/>
+                            <constraint firstItem="mO9-PX-3Qq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WDP-bD-USt"/>
+                            <constraint firstItem="vnb-SF-vJu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bmo-Gm-OiP"/>
+                            <constraint firstItem="vnb-SF-vJu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jP9-w4-dSC"/>
+                            <constraint firstItem="iEi-AM-x1s" firstAttribute="centerY" secondItem="uGA-bt-P9b" secondAttribute="centerY" id="pYb-FR-QWy"/>
+                            <constraint firstItem="uGA-bt-P9b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rw8-kZ-QmT"/>
+                            <constraint firstItem="Mzd-48-W4G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sdR-Rc-mRu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uGA-bt-P9b" secondAttribute="trailing" id="uQQ-9n-YRU"/>
+                            <constraint firstItem="uGA-bt-P9b" firstAttribute="top" secondItem="Mzd-48-W4G" secondAttribute="bottom" constant="25" id="we2-Ka-rGR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uGA-bt-P9b" secondAttribute="bottom" constant="25" id="xS9-R2-Kdn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="iEi-AM-x1s" id="s68-fD-coS"/>
+                        <outlet property="repoGridCollectionView" destination="uGA-bt-P9b" id="jkq-BC-wvD"/>
+                        <outlet property="repoListTableView" destination="mO9-PX-3Qq" id="RqK-BF-Q5U"/>
+                        <outlet property="repoSearchBar" destination="vnb-SF-vJu" id="wyS-BH-DSf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.00492610837438"/>
+        </scene>
+    </scenes>
+</document>
